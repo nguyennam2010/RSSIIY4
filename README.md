@@ -34,7 +34,8 @@ RSSIIY
 
 - From Window, choose Remote Desktop Connection
 - Enter Data Center IP address, username and password to connect to the server (Contact Victor to get the IP address, username and password).
-![image](https://github.com/nguyennam2010/RSSIIY33/assets/102983698/8349ceae-37e4-4eed-be8a-33fd2d4ff4a4)
+![1](https://github.com/nguyennam2010/RSSIIY/assets/102983698/d2fd531e-75cf-47fd-8805-14296482c35c)
+
 
 ### Connect to MongoDB databases server
 
@@ -48,11 +49,13 @@ mongod --bind_ip_all
 ```
 to listen to outside ip
 
-![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/9347694e-18bc-4bea-997a-2322f381732f)
+![2](https://github.com/nguyennam2010/RSSIIY/assets/102983698/3e1ce288-c899-4d2f-b9dd-15753de21dad)
+
 
 - Open Robo3T. We can now connect to MongoDB databases server
 
-![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/57999d68-6997-40f4-ae34-fa52f1683752)
+![3](https://github.com/nguyennam2010/RSSIIY/assets/102983698/0a9e6479-1e0c-4a64-bbd7-787715963edf)
+
 
 ## B. Auto-run python script 
 - Open Spyder and run these 4 python scripts:
@@ -74,7 +77,8 @@ to listen to outside ip
     - VM MongoDB URL （ex: mongodb://administrator:administrator@MONGOIP:27017)
     - MongoDB Database (ex: WiFi_AP_Data)
 
-![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/8575d4c7-b784-49fa-ba55-f9ef4ad8b249)
+![4](https://github.com/nguyennam2010/RSSIIY/assets/102983698/f4cd6f4f-1f79-42cd-91cf-e16de26148e5)
+
 
 ### Display aruba AP data into Dashboard
 
@@ -91,7 +95,8 @@ db.Controller_4.aggregate([
 ```
 
 - The result shows the AP and their client numbers:
-![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/0a85a1a4-73d4-4b37-8883-0f7708b663b4)
+![5](https://github.com/nguyennam2010/RSSIIY/assets/102983698/3de019e1-b311-4947-a3d6-0f30d90eaf58)
+
 
 ### Run mongodb-grafana API on background
 
