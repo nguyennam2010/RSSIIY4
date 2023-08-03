@@ -1,0 +1,96 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Retrieve_RSSI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Retrieve_RSSI</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadministrator%5Cdesktop%5Chandover2%5Cretrieve_rssi.py">c:\users\administrator\desktop\handover2\retrieve_rssi.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Wed&nbsp;Mar&nbsp;&nbsp;8&nbsp;00:02:25&nbsp;2023<br>
+@author:&nbsp;Hoai-Nam&nbsp;Nguyen</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="warnings.html">warnings</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-authentication"><strong>authentication</strong></a>(username, password, aosip)</dt><dd><tt>#Get&nbsp;the&nbsp;token&nbsp;to&nbsp;access&nbsp;vMM&nbsp;information&nbsp;&nbsp;--&nbsp;via&nbsp;API</tt></dd></dl>
+ <dl><dt><a name="-main_loc"><strong>main_loc</strong></a>(IY, floor)</dt></dl>
+ <dl><dt><a name="-show_command"><strong>show_command</strong></a>(aosip, uidaruba, command)</dt><dd><tt>#Function&nbsp;to&nbsp;access&nbsp;show&nbsp;command&nbsp;API</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>IY</strong> = [IY building Aruba APs name]<br>
+<strong>MONGOIP</strong> = MONGOIP<br>
+<strong>ROGUEAPCOLLECTION</strong> = ROGUEAPCOLLECTION<br>
+<strong>ROGUEAPDB</strong> = ROGUEAPDB<br>
+<strong>client</strong> = MongoClient(host=['MONGOIP:27017'], document_class=dict, tz_aware=False, connect=True)<br>
+<strong>col</strong> = Collection(Database(MongoClient(host=['MONGOIP...ue), ROGUEAPDB), ROGUEAPCOLLECTION)<br>
+<strong>data_json</strong> = [{'AP01': -39, 'AP03': -58, 'AP05': -53, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd28'), 'ap type': 'interfering', 'bssid': 'a0:2e:f3:01:d2:0a', ...}, {'AP01': None, 'AP03': -58, 'AP05': -22, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd29'), 'ap type': 'interfering', 'bssid': 'a0:2e:f3:01:9d:69', ...}, {'AP01': -52, 'AP03': None, 'AP05': -46, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2a'), 'ap type': 'interfering', 'bssid': '4c:c5:3e:9c:cc:4d', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -40, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2b'), 'ap type': 'interfering', 'bssid': '04:42:1a:d8:f1:fc', ...}, {'AP01': -39, 'AP03': None, 'AP05': -58, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2c'), 'ap type': 'interfering', 'bssid': '88:de:7c:62:9d:71', ...}, {'AP01': -39, 'AP03': None, 'AP05': -57, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2d'), 'ap type': 'interfering', 'bssid': '92:de:7c:62:9d:71', ...}, {'AP01': -55, 'AP03': -52, 'AP05': -30, 'AP07': -55, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2e'), 'ap type': 'interfering', 'bssid': '7a:45:58:11:c2:7e', ...}, {'AP01': -54, 'AP03': -51, 'AP05': None, 'AP07': -54, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd2f'), 'ap type': 'interfering', 'bssid': '7a:45:58:12:c2:7e', ...}, {'AP01': None, 'AP03': None, 'AP05': -41, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd30'), 'ap type': 'suspected-rogue(20%)', 'bssid': '78:45:58:12:c2:7e', ...}, {'AP01': -55, 'AP03': -53, 'AP05': -31, 'AP07': -55, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd31'), 'ap type': 'suspected-rogue(20%)', 'bssid': '78:45:58:11:c2:7e', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -58, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd32'), 'ap type': 'rogue', 'bssid': '20:a6:cd:25:33:10', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -58, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd33'), 'ap type': 'rogue', 'bssid': 'a8:bd:27:6e:e5:b2', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -59, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd34'), 'ap type': 'rogue', 'bssid': '20:a6:cd:25:33:12', ...}, {'AP01': -37, 'AP03': None, 'AP05': -58, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd35'), 'ap type': 'interfering', 'bssid': 'b0:b2:dc:ba:02:5a', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -55, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd36'), 'ap type': 'suspected-rogue(20%)', 'bssid': '04:42:1a:a4:6e:54', ...}, {'AP01': -39, 'AP03': None, 'AP05': -57, 'AP07': None, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd37'), 'ap type': 'interfering', 'bssid': '8e:de:7c:62:9d:71', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -59, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd38'), 'ap type': 'rogue', 'bssid': '20:a6:cd:25:33:11', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -57, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd39'), 'ap type': 'rogue', 'bssid': 'a8:bd:27:6e:e5:b1', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -53, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd3a'), 'ap type': 'interfering', 'bssid': '04:42:1a:d8:f1:f8', ...}, {'AP01': None, 'AP03': None, 'AP05': None, 'AP07': -58, 'AP09': None, 'Datetime': datetime.datetime(2023, 8, 4, 0, 0, 50, 897082), 'DatetimeStr': '2023-08-04 00:00:50', '_id': ObjectId('64cbcfc4de8b1730adb5dd3b'), 'ap type': 'rogue', 'bssid': '20:a6:cd:25:33:14', ...}, ...]<br>
+<strong>db</strong> = Database(MongoClient(host=['MONGOIP:27017'...ware=False, connect=True), ROGUEAPDB)<br>
+<strong>df</strong> =    Floor       AP1       AP2       AP3       AP4...  11F_AP01       NaN       NaN       NaN      NaN<br>
+<strong>df0</strong> =                 bssid         essid             ...ring  ...              1F
+
+[23 rows x 12 columns]<br>
+<strong>df1</strong> =                bssid                          es...      None  ...         2F
+
+[8 rows x 11 columns]<br>
+<strong>df10</strong> =                bssid                 essid      ...fering  ...             11F
+
+[2 rows x 9 columns]<br>
+<strong>df2</strong> =                bssid      essid      ap type  .....ering  ...              3F
+
+[8 rows x 13 columns]<br>
+<strong>df3</strong> =                 bssid                         es...     None  ...         4F
+
+[18 rows x 12 columns]<br>
+<strong>df4</strong> =                 bssid              essid        ...ring  ...              5F
+
+[15 rows x 13 columns]<br>
+<strong>df5</strong> =                bssid          essid             ...ering  ...              6F
+
+[4 rows x 13 columns]<br>
+<strong>df6</strong> =                 bssid                essid  ... ...     None  ...         7F
+
+[21 rows x 13 columns]<br>
+<strong>df8</strong> =                bssid                       essid...ering  ...              9F
+
+[7 rows x 12 columns]<br>
+<strong>df9</strong> = Empty DataFrame
+Columns: [bssid, essid, ap type,...AP07, mon AP number, xloc, yloc, floor]
+Index: []<br>
+<strong>dfa</strong> =                  bssid                       ess...ing  ...        11F  NaN
+
+[106 rows x 13 columns]<br>
+<strong>f</strong> = [IY Floors]<br>
+<strong>i</strong> = 105<br>
+<strong>n</strong> = 8<br>
+<strong>password</strong> = PASSWORD<br>
+<strong>token</strong> = 'MzAzYzFkYTUtYmNhNi00MTA5LTk3OWUtNmM4'<br>
+<strong>ts</strong> = datetime.datetime(2023, 8, 3, 16, 0, 50)<br>
+<strong>ts_tw</strong> = datetime.datetime(2023, 8, 4, 0, 0, 50, 897082)<br>
+<strong>ts_tw_str</strong> = '2023-08-04 00:00:50'<br>
+<strong>username</strong> = ACCOUNT<br>
+<strong>vMM_aosip</strong> = AOSIP</td></tr></table>
+</body></html>

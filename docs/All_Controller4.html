@@ -1,0 +1,108 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module All_Controller4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>All_Controller4</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadministrator%5Cdesktop%5Chandover%5Call_controller4.py">c:\users\administrator\desktop\handover\all_controller4.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Thu&nbsp;Nov&nbsp;&nbsp;3&nbsp;16:16:14&nbsp;2022<br>
+&nbsp;<br>
+@author:&nbsp;Administrator</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="pymongo.html">pymongo</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+<a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-recall"><strong>recall</strong></a>(i)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>AP1_Data</strong> = ['time_stamp', 'ap_name', 'radio_band', 'channel_str', 'radio_mode', 'total_data_bytes', 'eirp_10x', 'max_eirp', 'noise_floor', 'arm_ch_qual', 'sta_count', 'current_channel_utilization', 'rx_time', 'tx_time', 'channel_interference', 'channel_free', 'channel_busy', 'avg_data_rate', 'tx_avg_data_rate', 'rx_avg_data_rate', ...]<br>
+<strong>Client_Data</strong> = ['time_stamp', 'sta_mac_address', 'client_ht_phy_type', 'openflow_state', 'client_ip_address', 'client_user_name', 'client_dev_type', 'client_ap_location', 'client_conn_port', 'client_conn_type', 'client_timestamp', 'client_role_name', 'client_active_uac', 'client_standby_uac', 'ap_cluster_name', 'client_health', 'total_moves', 'successful_moves', 'steer_capability', 'ssid', ...]<br>
+<strong>Collections</strong> = 'Controller_4'<br>
+<strong>Controller_url</strong> = CONTROLLERURL<br>
+<strong>Database</strong> = CLIENTDB<br>
+<strong>Header_Data</strong> = ['time_stamp', 'ap_name', 'ap_eth_mac_address', 'ap_group', 'ap_deployment_mode', 'ap_model', 'ap_serial_number', 'ap_ip_address', 'ap_status', 'ap_state_reason', 'ap_provisioned', 'ap_uptime', 'lms_ip', 'ap_active_aac', 'ap_standby_aac', 'ap_cluster_name', 'ap_cur_dual_5g_mode', 'ap_tri_radio_mode', 'radio_count', 'total_data_bytes', ...]<br>
+<strong>__warningregistry__</strong> = {'version': 11}<br>
+<strong>account</strong> = ACCOUNT<br>
+<strong>chartData</strong> = 'opcode=login&amp;url=%2Flogin.html&amp;needxml=0&amp;uid=ACCOUNT&amp;passwd=PASSWORD'<br>
+<strong>client</strong> = MongoClient(host=['MONGOIP:27017'], document_class=dict, tz_aware=False, connect=True)<br>
+<strong>col</strong> = Collection(Database(MongoClient(host=['MONGOIP...nect=True), CLIENTDB), 'Controller_4')<br>
+<strong>column_name</strong> = [&lt;column_name&gt;sta_mac_address&lt;/column_name&gt;, &lt;co...ame&gt;, &lt;column_name&gt;client_fwd_mode&lt;/column_name&gt;]<br>
+<strong>cookie</strong> = {'SESSION': 'NjM4NzFiMmMtZTljMS00MWZiLWI5ODEtMmU4'}<br>
+<strong>cookieStr</strong> = 'NjM4NzFiMmMtZTljMS00MWZiLWI5ODEtMmU4'<br>
+<strong>data</strong> = [&lt;value&gt;90:4e:91:60:43:fa&lt;/value&gt;, &lt;value&gt;2&lt;/val...ue&gt;0&lt;/value&gt;, &lt;value&gt;0&lt;/value&gt;, &lt;value&gt;0&lt;/value&gt;]<br>
+<strong>data_json</strong> = [...]<br>
+<strong>data_total</strong> = [...]<br>
+<strong>db</strong> = Database(MongoClient(host=[MONGOIP..._aware=False, connect=True), CLIENTDB)<br>
+<strong>df</strong> =    time_stamp    sta_mac_address  ... client_enc...        10               0
+
+[5 rows x 75 columns]<br>
+<strong>df1</strong> =         ap_name sta_count   ap_ip_address  ... a...      0   AP-315  NTUST_IY
+
+[48 rows x 8 columns]<br>
+<strong>df3</strong> =    time_stamp    sta_mac_address  ... client_enc...        10               0
+
+[5 rows x 75 columns]<br>
+<strong>f</strong> = 0<br>
+<strong>header_tags</strong> = [&lt;header&gt;
+&lt;column_name&gt;sta_mac_address&lt;/column_n...umn_name&gt;client_fwd_mode&lt;/column_name&gt;
+&lt;/header&gt;]<br>
+<strong>headers</strong> = {'Content-Type': 'text/plain'}<br>
+<strong>i</strong> = 4<br>
+<strong>index</strong> = 13<br>
+<strong>n</strong> = 8<br>
+<strong>password</strong> = PASSWORD<br>
+<strong>path</strong> = 'data.txt'<br>
+<strong>payloadData</strong> = 'query=&lt;aruba_queries&gt;&lt;query&gt;&lt;qname&gt;backend-obser...es&gt;&amp;UIDARUBA=NjM4NzFiMmMtZTljMS00MWZiLWI5ODEtMmU4'<br>
+<strong>previous_day</strong> = datetime.datetime(2023, 7, 31, 23, 59, 49, 222248)<br>
+<strong>res</strong> = &lt;Response [200]&gt;<br>
+<strong>res_data</strong> = &lt;Response [200]&gt;<br>
+<strong>row_tags</strong> = [&lt;row&gt;
+&lt;value&gt;fe:9c:85:8d:c0:cd&lt;/value&gt;
+&lt;value&gt;6.../value&gt;
+&lt;value&gt;0&lt;/value&gt;
+&lt;value&gt;0&lt;/value&gt;
+&lt;/row&gt;]<br>
+<strong>soup</strong> = &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;aruba_qu...st_response&gt;
+&lt;/response&gt;
+&lt;/aruba_query_response&gt;
+<br>
+<strong>struct_time</strong> = time.struct_time(tm_year=2023, tm_mon=8, tm_mday...9, tm_sec=49, tm_wday=1, tm_yday=213, tm_isdst=0)<br>
+<strong>timeString</strong> = '2023-08-01-23-59'<br>
+<strong>time_stamp</strong> = 1690905589<br>
+<strong>ts</strong> = datetime.datetime(2023, 8, 1, 15, 59, 49)<br>
+<strong>ts_tw</strong> = datetime.datetime(2023, 8, 1, 23, 59, 49, 222248)<br>
+<strong>ts_tw_str</strong> = '2023-08-01 23:59:49'<br>
+<strong>url</strong> = 'https://AOSIP:4343/screens/cmnutil/execUiQuery.xml'<br>
+<strong>values</strong> = &lt;header&gt;
+&lt;column_name&gt;sta_mac_address&lt;/column_na...lumn_name&gt;client_fwd_mode&lt;/column_name&gt;
+&lt;/header&gt;</td></tr></table>
+</body></html>

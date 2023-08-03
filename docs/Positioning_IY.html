@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Positioning_IY</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Positioning_IY</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadministrator%5Cdesktop%5Chandover2%5Cpositioning_iy.py">c:\users\administrator\desktop\handover2\positioning_iy.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ast.html">ast</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+<a href="pymongo.html">pymongo</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-calc_dist"><strong>calc_dist</strong></a>(rssi, a, n)</dt><dd><tt>#&nbsp;Simplified&nbsp;path&nbsp;loss&nbsp;model</tt></dd></dl>
+ <dl><dt><a name="-dist_error_2d"><strong>dist_error_2d</strong></a>(x1, y1, x2, y2)</dt><dd><tt>#&nbsp;Calculate&nbsp;distance&nbsp;error</tt></dd></dl>
+ <dl><dt><a name="-pow"><strong>pow</strong></a>(x, y, /)</dt><dd><tt>Return&nbsp;x**y&nbsp;(x&nbsp;to&nbsp;the&nbsp;power&nbsp;of&nbsp;y).</tt></dd></dl>
+ <dl><dt><a name="-trilaterate"><strong>trilaterate</strong></a>(distances, positions)</dt><dd><tt>#&nbsp;Least&nbsp;square&nbsp;algorithm&nbsp;for&nbsp;indoor&nbsp;positioning</tt></dd></dl>
+ <dl><dt><a name="-trilateration_2d_co"><strong>trilateration_2d_co</strong></a>(distances, positions, name)</dt><dd><tt>#&nbsp;2D&nbsp;trilateration&nbsp;algorithm</tt></dd></dl>
+ <dl><dt><a name="-trilateration_3d_co"><strong>trilateration_3d_co</strong></a>(distances, positions, name)</dt><dd><tt>#&nbsp;3D&nbsp;trilateration&nbsp;algorithm</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>COORDINATECOLLECTION</strong> = COORDINATECOLLECTION<br>
+<strong>MONGOIP</strong> = MONGOIP<br>
+<strong>ROGUEAPDB</strong> = ROGUEAPDB<br>
+<strong>__warningregistry__</strong> = {'version': 14}<br>
+<strong>a</strong> = -37<br>
+<strong>b</strong> = -49<br>
+<strong>client</strong> = MongoClient(host=['MONGOIP:27017'], document_class=dict, tz_aware=False, connect=True)<br>
+<strong>col</strong> = Collection(Database(MongoClient(host=['MONGOIP...=True), ), 'Int_Coordinate')<br>
+<strong>cols_to_count</strong> = ['AP01', 'AP03', 'AP05', 'AP07', 'AP09']<br>
+<strong>data</strong> =                 bssid                essid  ... ...... -52.142857 -47.000000
+
+[61 rows x 17 columns]<br>
+<strong>data24</strong> =                 bssid                essid  ... ...... -52.714286 -52.166667
+
+[33 rows x 17 columns]<br>
+<strong>data5</strong> =                 bssid                essid  ... ...... -52.142857 -47.000000
+
+[28 rows x 17 columns]<br>
+<strong>data_1h</strong> =                  bssid  ...                Datet... 2023-08-03 21:44:00.493
+
+[782 rows x 16 columns]<br>
+<strong>data_json</strong> = [...]<br>
+<strong>data_mean</strong> =                  bssid  ... mon AP number
+0    0...87:18  ...             1
+
+[132 rows x 12 columns]<br>
+<strong>db</strong> = Database(MongoClient(host=['MONGOIP:27017'...ware=False, connect=True), ROGUEAPDB)<br>
+<strong>df</strong> =               positions  distances
+0   (20.86, 3...74)   1.272805
+3   (14.09, 3.31, 2.74)   2.039500<br>
+<strong>df_final</strong> =    floor              bssid  ...    z5          ...N 2023-08-03 22:39:18.212
+
+[61 rows x 25 columns]<br>
+<strong>dfa</strong> = [               bssid         essid      AP01  ..... NaN  18.988105   9.626552
+
+[8 rows x 22 columns],                bssid            essid      AP01 ...       NaN       NaN   NaN
+
+[5 rows x 22 columns],                bssid      essid      AP01  ...  ... 2.74  25.591135  6.685949
+
+[6 rows x 25 columns],                bssid     essid      AP01  ...   ... 21.709898  8.377876  2.74
+
+[8 rows x 22 columns],                 bssid            essid      AP01...55128  9.278840  2.740002
+
+[12 rows x 25 columns],                bssid          essid      AP01  .... 2.74  19.594390  8.165319
+
+[4 rows x 25 columns],                 bssid                essid  ... ... ...  24.248578  6.499586
+
+[18 rows x 25 columns], Empty DataFrame
+Columns: [bssid, essid, AP01, AP...ber, AP01R, AP03R, AP05R, AP07R, AP09R]
+Index: [], Empty DataFrame
+Columns: [bssid, essid, AP01, AP...ber, AP01R, AP03R, AP05R, AP07R, AP09R]
+Index: [], Empty DataFrame
+Columns: [bssid, essid, AP01, AP...ber, AP01R, AP03R, AP05R, AP07R, AP09R]
+Index: [], Empty DataFrame
+Columns: [bssid, essid, AP01, AP...ber, AP01R, AP03R, AP05R, AP07R, AP09R]
+Index: []]<br>
+<strong>distances</strong> = [0.8576958985908941, 0.8576958985908941, 1.2728050939810587, 2.039500469005057]<br>
+<strong>f</strong> = [IY Floors]<br>
+<strong>final</strong> = ['RogueAPname', 24.248578445802597, 6.499586315752484]<br>
+<strong>i</strong> = 60<br>
+<strong>j</strong> = 10<br>
+<strong>loc_iy</strong> = {Location of IY Aruba APs ...}<br>
+<strong>mask</strong> = 0      True
+1      True
+2     False
+3      True
+...0    False
+Name: channel, Length: 61, dtype: bool<br>
+<strong>myclient</strong> = MongoClient(host=['MONGOIP:27017'], document_class=dict, tz_aware=False, connect=True)<br>
+<strong>mycol</strong> = Collection(Database(MongoClient(host=['MONGOIP...ue), ROGUEAPDB), 'Int_Localization2')<br>
+<strong>mydb</strong> = Database(MongoClient(host=['MONGOIP:27017'...ware=False, connect=True), ROGUEAPDB)<br>
+<strong>n</strong> = 3<br>
+<strong>name</strong> = 'RogueAPname'<br>
+<strong>one_hour_ago</strong> = Timestamp('2023-08-03 21:39:18.212000')<br>
+<strong>pattern</strong> = r'\b(1[0-1]|[1-9])([a-zA-Z])?\b'<br>
+<strong>positions</strong> = [(20.86, 3.33, 2.74), (28.74, 4.07, 2.74), (23.01, 12.35, 2.74), (14.09, 3.31, 2.74)]<br>
+<strong>ts</strong> = datetime.datetime(2023, 8, 3, 15, 59, 54)<br>
+<strong>ts_tw</strong> = datetime.datetime(2023, 8, 3, 23, 59, 54, 16012)<br>
+<strong>ts_tw_str</strong> = '2023-08-03 23:59:54'</td></tr></table>
+</body></html>
