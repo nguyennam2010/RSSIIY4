@@ -34,7 +34,7 @@ RSSIIY
 
 - From Window, choose Remote Desktop Connection
 - Enter Data Center IP address, username and password to connect to the server (Contact Victor to get the IP address, username and password).
-![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/8349ceae-37e4-4eed-be8a-33fd2d4ff4a4)
+![image](https://github.com/nguyennam2010/RSSIIY33/assets/102983698/8349ceae-37e4-4eed-be8a-33fd2d4ff4a4)
 
 ### Connect to MongoDB databases server
 
