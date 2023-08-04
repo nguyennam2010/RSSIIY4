@@ -55,7 +55,9 @@ to listen to outside ip
 ![3](https://github.com/nguyennam2010/RSSIIY/assets/102983698/0a9e6479-1e0c-4a64-bbd7-787715963edf)
 
 
-## B. Auto-run python script 
+## B. Run script 
+- Download config (.env) file and xlsx file from Google Drive
+- Put them in the same directory with Controller4 and Positioning
 - Open Spyder and run these 4 python scripts:
   - Run ```Controller4/main.py``` to retrieve and store AP, User, Radio data to MongoDB
   - Run ```Positioning/main.py``` for indoor positioning
