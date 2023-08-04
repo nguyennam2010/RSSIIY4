@@ -56,10 +56,10 @@ to listen to outside ip
 
 ## B. Auto-run python script 
 - Open Spyder and run these 4 python scripts:
-  - Run ```call_Positioning_IY.py``` to auto-run the file Positioning_IY.py every 5 minutes
-  - Run ```call_All_Controller.py``` to auto-run the file All_Controller.py every 5 minutes
+  - Run ```Controller4/main.py``` to retrieve and store AP, User, Radio data to MongoDB
+  - Run ```Positioning/main.py``` for indoor positioning
   - Run ```EdgeSDK_AP_Coordinate.py``` to connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub, in order to show rogue APs (x, y) axis to Dashboard
-  - Run ```EdgeSDK_Client_Number.py``` to connect client number to WISE-PaaS DataHub (in order to show the number of clients in Dashboard).
+  - Run ```EdgeSDK_Client_Number.py``` to connect client number to WISE-PaaS DataHub, in order to show the number of clients in Dashboard.
 
 ## C. Query data from databases to WISE-PaaS
 
@@ -118,8 +118,6 @@ forever list
 ```
 Sometimes, if GPU server shuts down due to power cutoff, you need to rerun the API. 
 In this case, you only need to do the step from 2 to 5.
-
-https://github.com/eric248550/mongodb-grafana#run-mongodb-grafana-api-on-background
 
 ## D. Demo video
 
