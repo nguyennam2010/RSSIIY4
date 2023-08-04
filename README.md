@@ -9,27 +9,14 @@ To retrieve, process, and store WiFi data in MongoDB databases server in NTUST D
 ```
 
 RSSIIY
-|__ Controller4
-|  |__ ipynb
-|  |__ |__ AP_Data.ipynb
-|  |__ |__ Client_Data.ipynb
-|  |__ |__ Radio_Data.ipynb
-|  |__ |__ login_Aruba.ipynb
+|__ Controller4 # Retrieve AP, User, and Radio data
 |  |__ AP_Data.py
 |  |__ Client_Data.py
 |  |__ Radio_Data.py
 |  |__ Taiwan_Time.py
 |  |__ login_Aruba.py
-|  |__ main.py
-|__ Positioning
-|  |__ ipynb
-|  |__ |__ Taiwan_Time.ipynb
-|  |__ |__ Authentication.ipynb
-|  |__ |__ Show_Command.ipynb
-|  |__ |__ Retrieve_RSSI.ipynb
-|  |__ |__ Process_RSSI.ipynb
-|  |__ |__ Positioning_Function.ipynb
-|  |__ |__ Positioning_IY.ipynb
+|  |__ main.py # Main function for retrieving AP, User, and Radio data
+|__ Positioning # Indoor Positioning
 |  |__ Taiwan_Time.py
 |  |__ Authentication.py
 |  |__ Show_Command.py
@@ -37,8 +24,11 @@ RSSIIY
 |  |__ Process_RSSI.py
 |  |__ Positioning_Function.py
 |  |__ Positioning_IY.py
-|  |__ main.py
-|__ docs 
+|  |__ main.py # Main function for Indoor Positioning
+|__ data # Leave it blank
+|__ docs
+|  |__ Controller4_ipynb # Controller4 run on Jupiter Notebook
+|  |__ Positioning_ipynb # Indoor positioning run on Jupiter Notebook
 |__ src 
 |__ EdgeSDK_Client_Number.py # Connect client number to WISE-PaaS DataHub
 |__ EdgeSDK_AP_Coordinate.py # Connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub
