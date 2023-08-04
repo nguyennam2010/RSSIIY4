@@ -20,7 +20,8 @@ RSSIIY
 |__ src 
 |__ EdgeSDK_Client_Number.py # Connect client number to WISE-PaaS DataHub
 |__ EdgeSDK_AP_Coordinate.py # Connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub
-|__ .env.example #Configuration files with empty variables.
+|__ Trilateration.py # Trilateration alrogithm
+|__ Trilaterationipynb # Trilateration run on Jupiter Notebook
 |__ README.md
 
 ```
