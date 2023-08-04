@@ -9,18 +9,37 @@ To retrieve, process, and store WiFi data in MongoDB databases server in NTUST D
 ```
 
 RSSIIY
-|__ data
-|  |__ (.csv files) #Leave it empty! the user should download the .csv files from Google drive manually.
-|__ docs
-|   |__ All_Controller4.html # pydoc file for All_Controller4.py
-|   |__ Positioning_IY.html # pydoc file for Positioning_IY4.py
-|   |__ Retrieve_RSSI.html # pydoc file for Retrieve_RSSI.py
-|   |__ dashboard_development.md # Guide for dashboard development using WISE-PaaS
-|__ Positioning_IY.py #  Estimate AP locations (WiFi Positioning)
-|__ call_Positioning_IY.py # Auto-run the file Positioning_IY.py every 5 minutes
-|__ All_Controller4.py # Retrieve AP and Client data from Aruba WiFi Controller
-|__ call_All_Controller4.py # Auto-run the file All_Controller.py every 5 minutes
-|__ Retrieve_RSSI.py # Retrieve RSSI data from Aruba WiFi Controller
+|__ Controller4
+|  |__ ipynb
+|  |__ |__ AP_Data.ipynb
+|  |__ |__ Client_Data.ipynb
+|  |__ |__ Radio_Data.ipynb
+|  |__ |__ login_Aruba.ipynb
+|  |__ AP_Data.py
+|  |__ Client_Data.py
+|  |__ Radio_Data.py
+|  |__ Taiwan_Time.py
+|  |__ login_Aruba.py
+|  |__ main.py
+|__ Positioning
+|  |__ ipynb
+|  |__ |__ Taiwan_Time.ipynb
+|  |__ |__ Authentication.ipynb
+|  |__ |__ Show_Command.ipynb
+|  |__ |__ Retrieve_RSSI.ipynb
+|  |__ |__ Process_RSSI.ipynb
+|  |__ |__ Positioning_Function.ipynb
+|  |__ |__ Positioning_IY.ipynb
+|  |__ Taiwan_Time.py
+|  |__ Authentication.py
+|  |__ Show_Command.py
+|  |__ Retrieve_RSSI.py
+|  |__ Process_RSSI.py
+|  |__ Positioning_Function.py
+|  |__ Positioning_IY.py
+|  |__ main.py
+|__ docs 
+|__ src 
 |__ EdgeSDK_Client_Number.py # Connect client number to WISE-PaaS DataHub
 |__ EdgeSDK_AP_Coordinate.py # Connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub
 |__ .env.example #Configuration files with empty variables.
