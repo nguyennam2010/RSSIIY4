@@ -9,26 +9,14 @@ To retrieve, process, and store WiFi data in MongoDB databases server in NTUST D
 ```
 
 RSSIIY
-|__ Controller4 # Retrieve AP, User, and Radio data
-|  |__ AP_Data.py
-|  |__ Client_Data.py
-|  |__ Radio_Data.py
-|  |__ Taiwan_Time.py
-|  |__ login_Aruba.py
-|  |__ main.py # Main function for retrieving AP, User, and Radio data
-|__ Positioning # Indoor Positioning
-|  |__ Taiwan_Time.py
-|  |__ Authentication.py
-|  |__ Show_Command.py
-|  |__ Retrieve_RSSI.py
-|  |__ Process_RSSI.py
-|  |__ Positioning_Function.py
-|  |__ Positioning_IY.py
-|  |__ main.py # Main function for Indoor Positioning
+|__ Controller4 # Source code for retrieve AP, User, and Radio data
+|__ Positioning # Source code for Indoor Positioning
 |__ data # Leave it blank
 |__ docs
 |  |__ Controller4_ipynb # Controller4 run on Jupiter Notebook
 |  |__ Positioning_ipynb # Indoor positioning run on Jupiter Notebook
+|  |__ (pydocs files)
+|  |__ dashboard_development.md
 |__ src 
 |__ EdgeSDK_Client_Number.py # Connect client number to WISE-PaaS DataHub
 |__ EdgeSDK_AP_Coordinate.py # Connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub
