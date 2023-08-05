@@ -1,12 +1,18 @@
 # Dashboard Development
 
-After pushing MongoDB data to Dashboard, this is how you develop the Dashboard.
+After [pushing MongoDB data to Dashboard](https://github.com/nguyennam2010/RSSIIY/blob/main/README.md#c-query-data-from-databases-to-wise-paas), this is how you develop the Dashboard.
+
+## Method
+Two main methods in Dashboard development: Direct (MongoDB - Dashboard) and indirect visualization (MongoDB - DataHub - SaaS Composer - Dashboard).
+
+![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/2401a8a3-e246-4d68-8822-f23c9e9197de)
 
 ## Variables
 
 Create variables for AP and floor.
 
-![](https://i.imgur.com/XKiUE7M.png)
+![01](https://github.com/nguyennam2010/RSSIIY/assets/102983698/22058ec8-5692-4185-aba2-1b65819c9cfd)
+
 
 ## AP information
 
@@ -20,10 +26,12 @@ db.Controller_4.aggregate([
 {"$limit":1}
             ])
 ```
+Note: In this query, ```Controller_4``` is the collection of the AP database, which named ```Aruba_AP```. The query is same as you query data in your MongoDB. 
 
 - Result:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/55efa9e8-41f9-4e58-a876-46f570d44df2)
+![02](https://github.com/nguyennam2010/RSSIIY/assets/102983698/a09b211c-33ed-4666-86b6-2665ee9db4a2)
+
 
 ## Client number
 
@@ -35,10 +43,12 @@ db.AP_List.aggregate([
 {"$project": {"_id":0, "name":"2.4 GHz", "ap_name":"$ap", "value":"$sta_count","ts":"$ts"}}
             ])
 ```
+Note: You need to Add Query to query 5GHz, then it can show in the map together as the pic below.
 
 - Result:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/babfa7fe-30de-4b7d-acd0-564213aa9d4d)
+![03](https://github.com/nguyennam2010/RSSIIY/assets/102983698/3fab722b-c8cd-4320-8ccf-31e0ada1d0e2)
+
 
 ## Noise floor
 - Query (5 GHz):
@@ -52,7 +62,8 @@ db.AP_List.aggregate([
 
 - Result:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/33a35dc8-3560-46ff-8581-f81b3bf77ccb)
+![04](https://github.com/nguyennam2010/RSSIIY/assets/102983698/960534b2-20f5-4372-afdd-c6691e2e10e4)
+
 
 ## Channel utilization
 - Query (2.4 GHz - tx time):
@@ -65,7 +76,8 @@ db.AP_List.aggregate([
 ```
 - Result:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/c4b365b0-f367-4c87-a588-3f3a167cd6fd)
+![05](https://github.com/nguyennam2010/RSSIIY/assets/102983698/02db0e81-a0ea-42a2-b458-22adbf2ed9b3)
+
 
 ## Client information
 
@@ -82,7 +94,8 @@ db.Controller_4.aggregate([
 
 - Result:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/5908236c-149a-472d-8939-8b7db00f1046)
+![06](https://github.com/nguyennam2010/RSSIIY/assets/102983698/f4e88179-e9b7-4418-981a-2a8ac6a5a41f)
+
 
 ## Client map
 
@@ -92,21 +105,24 @@ First, you need to download SDK code from [WISE-PaaS documentation](https://docs
 
 Their code for random data generation:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/443262a8-dd34-4d0b-86be-190200554063)
+![image](https://github.com/nguyennam2010/RSSIIY/assets/102983698/c77899be-7ef4-423a-ac4c-d67b36c1ddd4)
 
 You need to adjust the above code to connect to DataHub. For example, push AP name and Client number from MongoDB:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/f4f27158-849b-48bf-b3b4-61213de19cc1)
+![08](https://github.com/nguyennam2010/RSSIIY/assets/102983698/2b754e42-e9e8-4139-9645-94ee5af6d608)
+
 
 Then you can push the data to DataHub follow this video: https://www.youtube.com/watch?v=IP46vcWuHhY
 
 Now you edit Composer to bind the data to the map. Create appropriate assets and bind the corresponding data from DataHub:
 
-![image](https://github.com/nguyennam2010/RSSIIY3/assets/102983698/3ac22595-1fa0-413e-aa63-b7df8616b702)
+![09](https://github.com/nguyennam2010/RSSIIY/assets/102983698/a961c912-a397-4544-987e-d23d37bbafb4)
+
 
 Use advanced setting to change color of the Client nodes:
 
-<img width="793" alt="image" src="https://github.com/nguyennam2010/RSSIIY3/assets/102983698/6e1e92bd-8ef8-45d3-9ac8-79a4294c33aa">
+![010](https://github.com/nguyennam2010/RSSIIY/assets/102983698/7665bc20-bf1d-408f-be93-0b44021bbc21)
+
 
 ```
 function(value, oldValue, option){ 
@@ -121,15 +137,19 @@ function(value, oldValue, option){
     - Yellow light: 2 < users < 10
     - Red light: > 10 users
 
-In Dashboard, choose SaaS Composer-Viewer and choose the SaaS Composer directory to the file setting:
+In Dashboard, create a panel, choose SaaS Composer-Viewer and choose the SaaS Composer directory to the file setting:
 
-<img width="955" alt="image" src="https://github.com/nguyennam2010/RSSIIY3/assets/102983698/917c5747-5441-42fd-9898-a75707fdf37d">
+![011](https://github.com/nguyennam2010/RSSIIY/assets/102983698/656bde70-bb0a-43d4-a145-66cbadd9d6b7)
+
+
 
 ## Interference map
 
 Same as Client map, you import the IY building map to SaaS Composer and bind their (x, y) variables.
 
-<img width="793" alt="image" src="https://github.com/nguyennam2010/RSSIIY3/assets/102983698/941d11dd-4070-4cc0-9a94-4dc8087b946c">
+![012](https://github.com/nguyennam2010/RSSIIY/assets/102983698/fdb3ab37-25d9-48ab-aed5-a1ef6ceabe3e)
+
+In Dashboard, create a panel for Interference Map and choose the directory same as Client Map.
 
 
 
