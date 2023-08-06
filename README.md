@@ -9,19 +9,22 @@ To retrieve, process, and store WiFi data in MongoDB databases server in NTUST D
 ```
 
 RSSIIY
-|__ Controller4 # Source code for retrieve AP, User, and Radio data
-|__ Positioning # Source code for Indoor Positioning
+|__ src
+|  |__ Controller4 # Crawling AP, User, and Radio data source code
+|  |__ Positioning # Indoor Positioning source code
 |__ data # Leave it blank
 |__ docs
-|  |__ Controller4_ipynb # Controller4 run on Jupiter Notebook
-|  |__ Positioning_ipynb # Indoor positioning run on Jupiter Notebook
 |  |__ (pydocs files)
+|  |__ databases.png
+|  |__ system_architecture.png
 |  |__ dashboard_development.md
-|__ src 
+|__ test
+|  |__ Controller4_ipynb # Controller4 test results on Jupiter Notebook
+|  |__ Positioning_ipynb # Indoor positioning test results on Jupiter Notebook
 |__ EdgeSDK_Client_Number.py # Connect client number to WISE-PaaS DataHub
 |__ EdgeSDK_AP_Coordinate.py # Connect interfering/rogue APs coordinate axis (x, y) to WISE-PaaS DataHub
 |__ Trilateration.py # Trilateration alrogithm
-|__ Trilaterationipynb # Trilateration run on Jupiter Notebook
+|__ Trilaterationipynb # Trilateration test results on Jupiter Notebook
 |__ README.md
 
 ```
